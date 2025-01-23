@@ -10,7 +10,7 @@ if (!GOOGLE_IMPERSONATE_EMAIL) throw new Error('Google impersonation missing!');
 const client = new Client({ intents: [] });
 
 const googleClient = new JWT({
-    keyFile: './google.json',
+    keyFile: process.env.NODE_ENV === 'production' ? '/secrets/google.json' : './google.json',
     scopes: ['https://www.googleapis.com/auth/drive'],
     subject: GOOGLE_IMPERSONATE_EMAIL,
 });
