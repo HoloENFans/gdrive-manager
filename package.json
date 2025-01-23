@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@google-cloud/local-auth": "^3.0.1",
     "bufferutil": "^4.0.9",
     "discord.js": "^14.17.3",
     "google-auth-library": "^9.15.0",
